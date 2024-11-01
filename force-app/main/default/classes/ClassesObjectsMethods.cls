@@ -129,16 +129,27 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer countVowels(String str) {
         // Initialize the result Integer
+        Integer result=0;
+        Integer count = 0;
+        str=str.toLowerCase();
 
-        /*
-        for () {
-            // get individual characters from the string - hint use substring or split
-            // check if the character is a vowel
+        List<String> characters = new List<String>();
+        for (count = 0; count < str.length(); count++) {
+
+            //we extract a single character and add it to the characters list.
+            characters.add(str.substring(count, count + 1));
+            
+            }
+            
+        for (count=0;count<characters.size();count+=1){
             // if it is a vowel, increment the result Integer
+            if(characters[count]=='a'|characters[count]=='e'||characters[count]=='i'||characters[count]=='o'||characters[count]=='u'){
+                result+=1;
         }
-        */
+        }
+        
 
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
