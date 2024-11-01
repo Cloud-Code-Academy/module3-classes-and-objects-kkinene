@@ -217,9 +217,15 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer generateRandomNumber() {
         // Use Math class to generate number between 50 and 100
-
+        Double num=Math.random();
+        Double myInteger = num*100; // This will truncate the decimal part
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        if(myInteger>100||myInteger>50){
+            myInteger-=50;
+        }else{
+            myInteger+=50;
+        }
+        return (Integer)myInteger; // Replace null with the variable you used to store the result
     }
 
     /**
