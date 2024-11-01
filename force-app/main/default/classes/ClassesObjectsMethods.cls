@@ -26,7 +26,7 @@
  * Math class: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm
  * Classes: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_understanding.htm
  *
- * @author Your Name
+ * @author Katende Kinene
  */
 
 public with sharing class ClassesObjectsMethods {
@@ -40,19 +40,27 @@ public with sharing class ClassesObjectsMethods {
      */
     public static List<String> practiceStringMethods() {
         // Initialize a String with 'Hello, Salesforce!'
-        
-        // Get the length of the String        
+        String initialString='Hello, Salesforce!';
+        // Get the length of the String   
+        Integer length= initialString.length();
+    	String myStringLength= String.valueOf(length);
         // Get a substring of the String of the first 5 characters
+        String mySubString = initialString.substring(0,5);
         // Convert the String to lower case
+        String myLowerCaseString= initialString.toLowerCase();
+
+    List<String> result= new List<String>{myStringLength, mySubString, myLowerCaseString};
         
-        // Return the list with the string data
+       /* // Return the list with the string data
         // In the first position add the string length
+        result.add('\''+myStringLength+'\'');
         // In the second position add the substring
+        result.add('\''+mySubString+'\'');
         // In the third position add the string in lower case
+        result.add('\''+myLowerCaseString+'\'');*/
 
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
-
     /**
      * Question 2
      * Check if the input string starts with 'Sales', ends with 'Force', and contains 'Awesome'.
