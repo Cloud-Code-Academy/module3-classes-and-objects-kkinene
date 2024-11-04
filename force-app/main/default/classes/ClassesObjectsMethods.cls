@@ -305,21 +305,29 @@ public with sharing class ClassesObjectsMethods {
      * This class can be used in the context of a library management system, bookstore, etc.
      * where you need to manipulate and manage book information.
      */
-    public class Book {
+    
+     public class Book {
         // Declare three public instance variables - title, author, pages
-        // title
-        // author
-        // pages
+        public String title;// title
+        public String author;// author
+        public Integer pages;// pages
     
         // Book constructor to initialize the title and author
-        public Book() {
+        public Book(String title, String author) {
             // Initialize the title and author
+            this.author=author;
+            this.title=title;
+            this.pages= null;
+            //System.debug(this.author + this.title);
         }
     
         // Method that returns the details of the book
         public String getBookDetails() {
             // return A string containing the details of the book in the format "Title: <title>, Author: <author>"
-            return null; // Replace null with the variable you used to store the result
+            String details;
+            details='Title: '+title+','+' Author: '+author; 
+            //System.debug('Title: '+title+','+' Author: '+author);
+            return details; // Replace null with the variable you used to store the result
         }
     }
     
@@ -332,11 +340,12 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String createAndGetBookDetails() {
         // Create a Book object with title "A Brief History of Time" and author "Stephen Hawking"
+        Book newBook = new Book('A Brief History of Time', 'Stephen Hawking');
 
         // Call the getBookDetails method on the book object to get the details of the book
-
+        String details =newBook.getBookDetails();
         // Return the details of the book
-        return null; // Replace null with the variable you used to store the result
+        return details; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -374,20 +383,41 @@ public with sharing class ClassesObjectsMethods {
      */
     public class Person {
         // Declare private two instance variables - (TEXT) name and (Number) age
+        private String name;
+        private Integer age;
         
         // Constructor to initialize the name and age
+        public Person(String name, Integer age){
+            this.name=name;
+            this.age=age;
+        }
     
         // Method introduceYourself that returns the details of the person        
         // Return a string in the format "Hello, my name is <name> and I am <age> years old."
-        // For example, introduceYourself() should return a string like "Hello, my name is John Doe and I am 28 years old."
+       // For example, introduceYourself() should return a string like "Hello, my name is John Doe and I am 28 years old."
+
+        public String introduceYourself(){
+                return 'Hello, my name is '+name+' and I am '+age+' years old.';
+        }
+        }
 
         // Getter method that returns the name of the person
-
+        public String getName(){
+            return name;
+        }
         // Getter method that returns the age of the person
+        public Integer getAge(){
+            return age;
+        }
 
         // Setter method that sets the name of the person
-
+        public void setName(String newName){
+            name=newName;
+        }
         // Setter method that sets the age of the person
+        public void setAge(Integer newAge){
+            age=newAge;
+        }
     }
 
     /**

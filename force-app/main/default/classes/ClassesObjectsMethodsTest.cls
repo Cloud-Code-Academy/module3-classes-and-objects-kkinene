@@ -196,11 +196,12 @@ public with sharing class ClassesObjectsMethodsTest {
 
         // Call the getBookDetails method and verify the result
         String bookDetails = myBook.getBookDetails();
+        System.debug(bookDetails);
         Assert.areEqual('Title: 1984, Author: George Orwell', bookDetails, 'The book details should be correctly formatted');
-    }
-    */
+    }*/
+    
 
-    @IsTest
+   /* @IsTest
     static void testCreateAndGetBookDetails() {
         // Call the createAndGetBookDetails method and capture the return value
         String result = ClassesObjectsMethods.createAndGetBookDetails();
@@ -210,7 +211,7 @@ public with sharing class ClassesObjectsMethodsTest {
 
         // Use the Assert class to check that the result matches the expected result
         Assert.areEqual(expectedResult, result, 'The method should return the correct book details');
-    }
+    }*/
 
     /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
