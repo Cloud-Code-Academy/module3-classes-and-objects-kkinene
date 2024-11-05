@@ -484,14 +484,24 @@ public with sharing class ClassesObjectsMethods {
      */
     public static List<Person> createMultiplePersons(List<String> names, Integer age) {
 
+        List <Person> personList= new List<Person>();
         // Loop through each name in the provided list of names
-            // Create a new Person object for each name
-            
-            // Add the new Person object to the list of Person objects
+        Person temp =new Person('', age);
+        String fullName='';
         
+        for(Integer count=0;count<names.size();count+=1){
+            // Create a new Person object for each name
+            //System.debug('names '+count+' = '+names[count]);
+            fullName=names[count];
+
+            Person tempPerson= new Person(fullName, age);
+            // Add the new Person object to the list of Person objects
+            personList.add(tempPerson);      
+        }
+
         
         // Return the list of Person objects
-        return null; // Replace null with the variable you used to store the result
+        return personList; // Replace null with the variable you used to store the result
     }
 
 
