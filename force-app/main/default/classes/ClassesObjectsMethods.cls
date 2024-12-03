@@ -397,8 +397,8 @@ public with sharing class ClassesObjectsMethods {
         
         // Constructor to initialize the name and age
         public Person(String name, Integer age){
-            this.name= name;
-            this.age=age;
+            this.name = name;
+            this.age = age;
         }
     
         // Method introduceYourself that returns the details of the person        
