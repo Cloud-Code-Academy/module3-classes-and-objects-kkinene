@@ -345,7 +345,7 @@ public with sharing class ClassesObjectsMethods {
         Book newBook = new Book('A Brief History of Time', 'Stephen Hawking');
 
         // Call the getBookDetails method on the book object to get the details of the book
-        String newDetails =newBook.getBookDetails();
+        String newDetails = newBook.getBookDetails();
         // Return the details of the book
 
         return newDetails; // Replace null with the variable you used to store the result
