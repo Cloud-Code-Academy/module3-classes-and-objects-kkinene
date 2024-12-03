@@ -353,7 +353,7 @@ public with sharing class ClassesObjectsMethods {
         Book newBook = new Book('A Brief History of Time', 'Stephen Hawking');
 
         // Call the getBookDetails method on the book object to get the details of the book
-        String newDetails =newBook.getBookDetails();
+        String newDetails = newBook.getBookDetails();
         // Return the details of the book
 
         return newDetails; // Replace null with the variable you used to store the result
@@ -405,8 +405,8 @@ public with sharing class ClassesObjectsMethods {
         
         // Constructor to initialize the name and age
         public Person(String name, Integer age){
-            this.name= name;
-            this.age=age;
+            this.name = name;
+            this.age = age;
         }
     
         // Method introduceYourself that returns the details of the person        
