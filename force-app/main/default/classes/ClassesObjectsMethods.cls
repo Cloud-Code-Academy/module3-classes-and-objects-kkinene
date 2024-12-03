@@ -73,23 +73,30 @@ public with sharing class ClassesObjectsMethods {
         List<Boolean> result= new List<Boolean>();
 
         // Check if the string starts with 'Sales'
-        if(input.startsWith('Sales')){
+        /*if(input.startsWith('Sales')){
             result.add(true);
         }else {
             result.add(false);
-        }
+        }*/
+        Boolean startsWith = input.startsWith('Sales');
+        result.add(startsWith);
         // Check if the string ends with 'Force'
-        if(input.endsWith('Force')){
+        /*if(input.endsWith('Force')){
             result.add(true);
         }else {
             result.add(false);
-        }
+        }*/
+        Boolean endsWith = input.endsWith('Force');
+        result.add(endsWith);
         // Check if the string contains 'Awesome'
-        if(input.contains('Awesome')){
+        /*if(input.contains('Awesome')){
             result.add(true);
         }else {
             result.add(false);
-        }
+        }*/
+
+        Boolean contains = input.contains('Awesome');
+        result.add(contains);
         
         return result; // Replace null with the variable you used to store the result
     }
@@ -169,10 +176,9 @@ public with sharing class ClassesObjectsMethods {
         // Loop through the list of scientists' names
         for (String name: scientistNames){
             
-            System.debug(name);
             // Add the name to the result string, followed by a comma if it contains G  
             if(name.contains('g')||name.contains('G')){
-                gNames=gNames+name+',';
+                gNames = gNames + name + ',';
             }    
 
             }
@@ -218,12 +224,12 @@ public with sharing class ClassesObjectsMethods {
         // Use Math class to generate number between 50 and 100
         Double num=Math.random();
         Double myInteger = num*100; // This will truncate the decimal part
-        System.debug('MyInteger ='+myInteger);
+
         // Return the random integer
         if(myInteger>100.0){
-            myInteger-=50;
+            myInteger -= 50;
         }else if(myInteger<50.0){
-            myInteger+=50;
+            myInteger += 50;
         }
         Integer myResult=(Integer)myInteger;
         return  myResult;// Replace null with the variable you used to store the result
@@ -239,7 +245,7 @@ public with sharing class ClassesObjectsMethods {
         // Get the todays date
         Date myDate =date.today();
         // Format the current date
-        String dayString=myDate.format();
+        String dayString = myDate.format();
         // Return the result
         return dayString; // Replace null with the variable you used to store the result
     }
@@ -485,7 +491,6 @@ public with sharing class ClassesObjectsMethods {
 
         List <Person> personList= new List<Person>();
         // Loop through each name in the provided list of names
-        Person temp =new Person('', age);
         String fullName='';
         
         for(Integer count=0;count<names.size();count+=1){
