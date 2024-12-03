@@ -118,7 +118,8 @@ public with sharing class ClassesObjectsMethods {
         // Join the unique words back into a sentence
         String result='';
         for(String word: uniquewords){
-            result+= word + ' ';//did not it was possible to combine shorthand and additional character in assignment.
+            //result += word + ' ';//did not it was possible to combine shorthand and additional character in assignment.
+            result += String.join(word + ' ');//This passed the Test, but I am confused since the documentation seem to sepcify that I require an Obj and a seperator. should it be String.join(word, ' ');?
         }
         
 
