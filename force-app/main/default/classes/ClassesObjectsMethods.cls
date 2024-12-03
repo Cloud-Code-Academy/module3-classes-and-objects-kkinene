@@ -142,12 +142,14 @@ public with sharing class ClassesObjectsMethods {
         str=str.toLowerCase();
 
         List<String> characters = new List<String>();
-        for (count = 0; count < str.length(); count++) {
+        /*for (count = 0; count < str.length(); count++) {
 
             //we extract a single character and add it to the characters list.
             characters.add(str.substring(count, count + 1));
             
-            }
+            }*/
+        
+            characters = str.split();//Confused this would return the {'Hello', 'World'}
             
         for (count=0;count<characters.size();count+=1){
             // if it is a vowel, increment the result Integer
